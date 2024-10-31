@@ -14,7 +14,7 @@ const Footer = () => {
               className="object-contain"
             />
           </a>
-          <a href="#" className="block w-[140px] h-[42px] relative">
+          <a href="/certify.apk" download={"Certify.apk"} className="block w-[140px] h-[42px] relative">
             <Image
               src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
               alt="Get it on Google Play"

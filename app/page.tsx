@@ -11,7 +11,7 @@ import { motion } from "framer-motion"
 const MarginedSection = function({ children }: { children: React.ReactNode }) {
   return (
     <motion.section 
-      className="mx-[40px]"
+      className="mx-[20px] md:mx-[40px]"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
