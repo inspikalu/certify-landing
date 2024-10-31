@@ -16,7 +16,7 @@ const Navbar = () => {
         <li><Link href="/#why_certify">Why <span className="underline" style={{ fontStyle: "italic", fontSize: "1.2rem", fontWeight: "800" }}>Certify</span>?</Link></li>
         <li><Link href="/#the_team">The Team</Link></li>
       </ul>
-      <div className="bg-[#6C3ACA] flex items-center p-3 rounded-full border-2 border-white cursor-pointer gap-3">Get Started <div className="rotate-45"><ArrowUp /></div></div>
+      <div className="bg-[#6C3ACA] flex items-center p-3 rounded-full border-2 border-white cursor-pointer gap-3 text-sm">Get Started <div className="rotate-45"><ArrowUp size={16}/></div></div>
     </nav>
   )
 }
