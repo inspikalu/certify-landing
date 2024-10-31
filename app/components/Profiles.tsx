@@ -1,4 +1,3 @@
-import { profile } from "console"
 import Image from "next/image"
 const profiles = [
   {
@@ -37,7 +36,7 @@ const ProfileCard = function({ name, position, image }: { name: string, position
 }
 const Profiles = () => {
   return (
-    <div className="w-full min-h-[287px] flex items-center justify-center my-6 overflow-hidden py-3" id="the_team">
+    <div className="w-full min-h-[287px] flex items-center justify-center my-6 overflow-hidden py-3">
       <div className="w-full min-h-[287px] animate-marquee_reverse flex items-center justify-center gap-[20px]">
         {
           profiles.map((value, index) => { return <ProfileCard key={index} name={value.name} position={value.position} image={value.image} /> })
