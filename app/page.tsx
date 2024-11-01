@@ -1,12 +1,13 @@
 'use client'
 
 import Navbar from "@/app/components/Navbar"
-import Hero from "@/app/components/Hero"
+// import Hero from "@/app/components/Hero"
 import Marquee from "@/app/components/Marquee"
 import Cards from "@/app/components/Cards"
 import Profiles from "@/app/components/Profiles"
 import Footer from "@/app/components/Footer"
 import { motion } from "framer-motion"
+import Hero2 from "@/app/components/Hero2"
 
 const MarginedSection = function({ children }: { children: React.ReactNode }) {
   return (
@@ -48,7 +49,8 @@ const Home = function() {
       <motion.div variants={item}>
         <MarginedSection>
           <Navbar />
-          <Hero />
+          {/* <Hero /> */}
+          <Hero2 />
         </MarginedSection>
       </motion.div>
 
