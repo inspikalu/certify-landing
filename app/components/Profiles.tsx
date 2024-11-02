@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const profiles = [
   {
-    name: "Mbanefo ebuka",
+    name: "Mbanefo Ebuka",
     position: "Full-Stack Designer",
     image: "/cre8tiveebuka.png"
   },
@@ -15,7 +15,7 @@ const profiles = [
   },
   {
     name: "Okereke C. Kalu",
-    position: "Free Stack Olosho",
+    position: "Frontend Developer",
     image: "/inspikalu.png"
   },
   {

@@ -14,7 +14,7 @@ const Marquee = () => {
       <div className="w-full h-full min-h-[107px] animate-marquee flex items-center justify-center gap-[20px]">
         {
           ["scan", "verify", "track products", "transfer ownership"].map((item, index) => {
-            return (<div key={index} className="flex items-center justify-center capitalize gap-[20px] text-white font-bold text-[1.6rem]"><SVG />{item}</div>)
+            return (<div key={index} className="flex items-center justify-center capitalize gap-[20px] text-white font-bold text-[2.6rem]"><SVG />{item}</div>)
           })
         }
       </div>
