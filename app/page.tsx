@@ -1,78 +1,40 @@
-'use client'
+"use client"
+import Footer from "@/components/app/Footer";
+import Hero from "@/components/app/Hero";
+import Navbar from "@/components/app/Navbar";
+import Stats from "@/components/app/Stats";
+import ProblemSolution from "@/components/app/ProblemSolution";
+import TimelineComponent from "@/components/app/timeline";
+import Features from "@/components/app/Features";
+import AnimatedSection from "@/components/app/AnimatedSection";
 
-import Navbar from "@/app/components/Navbar"
-// import Hero from "@/app/components/Hero"
-import Marquee from "@/app/components/Marquee"
-import Cards from "@/app/components/Cards"
-import Profiles from "@/app/components/Profiles"
-import Footer from "@/app/components/Footer"
-import { motion } from "framer-motion"
-import Hero2 from "@/app/components/Hero2"
-
-const MarginedSection = function({ children }: { children: React.ReactNode }) {
+export default function HomePage() {
   return (
-    <motion.section 
-      className="mx-[20px] md:mx-[40px]"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      {children}
-    </motion.section>
-  )
+    <div className="bg-black text-white">
+      <div className="relative bg-gradient-to-b from-[#2E1A47] to-[#3B0080] text-white">
+        <div className="absolute inset-0 noise-texture opacity-20" />
+        <Navbar />
+        <div className="w-full h-[6rem]" />
+        <Hero />
+      </div>
+      
+      <AnimatedSection>
+        <Stats />
+      </AnimatedSection>
+
+      <AnimatedSection delay={0.2}>
+        <ProblemSolution />
+      </AnimatedSection>
+
+      <AnimatedSection delay={0.3}>
+        <Features />
+      </AnimatedSection>
+
+      <AnimatedSection delay={0.4}>
+        <TimelineComponent />
+      </AnimatedSection>
+
+      <Footer />
+    </div>
+  );
 }
-
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.3
-    }
-  }
-}
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 }
-}
-
-const Home = function() {
-  return (
-    <motion.div 
-      className="mt-6"
-      variants={container}
-      initial="hidden"
-      animate="show"
-    >
-      <motion.div variants={item}>
-        <MarginedSection>
-          <Navbar />
-          {/* <Hero /> */}
-          <Hero2 />
-        </MarginedSection>
-      </motion.div>
-
-      <motion.div variants={item}>
-        <Marquee />
-      </motion.div>
-
-      <motion.div variants={item}>
-        <MarginedSection>
-          <Cards />
-        </MarginedSection>
-      </motion.div>
-
-      <motion.div variants={item}>
-        <Profiles />
-      </motion.div>
-
-      <motion.div variants={item}>
-        <Footer />
-      </motion.div>
-    </motion.div>
-  )
-}
-
-export default Home
