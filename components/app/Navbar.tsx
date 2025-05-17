@@ -26,7 +26,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroHeight = window.innerHeight * 0.60; // 84vh from Hero component
+      const heroHeight = window.innerHeight * 0.30; // 84vh from Hero component
       setIsScrolled(window.scrollY > heroHeight);
     };
 
